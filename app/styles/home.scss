@@ -1,0 +1,76 @@
+#background {
+    background-image: url("../images/steve-gribble-MUoP6i9w870-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: fill;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    #container-grid {
+        background-color: rgb(227, 227, 227, .6);
+        width: 270px;
+        padding: 10px;
+        border-radius: 20px;
+        display: grid;
+        place-content: center;
+        height: 400px;
+        #container-grid-inner {
+            height: 400px;
+            #login-box-container {
+                height: inherit;
+                display: grid;
+                #logo {
+
+                    #logo-text-a {
+                        font-size: 50px;
+                        margin: 0;
+                        padding: 0;
+                        text-align: center;
+                        position: relative;
+                        color: #4C7ACB;
+                        font-family: 'Rozha One';
+                    }
+                    #logo-text-b {
+                        @extend #logo-text-a;
+                        bottom: 32px;
+                    }
+                }
+                #form-container {
+                    form {
+                        display: grid;
+                        position: relative;
+                        top: 30px;
+                        #email {
+                            position: relative;
+                            width: 220px;
+                            margin-bottom: 10px;
+                            color: black;
+                            border: none;
+                            padding: 10px;
+                            border-radius: 20px;
+                            font-family: 'Red Hat Display';
+                        }
+                        #password {
+                            @extend #email;
+                            margin-bottom: 40px;
+                        }
+                        #submit {
+                            color: white;
+                            background-color: #737EFF;
+                            border: none;
+                            border-radius: 20px;
+                            height: 33px;
+                            font-family: "Red Hat Display";
+                            font-weight: 900;
+                            font-size: 14px;
+                        }
+                        #submit:hover {
+                            cursor: pointer;
+                            background-color: #676ec2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

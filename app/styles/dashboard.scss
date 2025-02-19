@@ -1,0 +1,288 @@
+#background-dashboard {
+    background-image: url("../images/steve-gribble-MUoP6i9w870-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: fill;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    #container-grid-dashboard {
+        max-width: 1400px;
+        width: 100vw;
+        max-height: 1200px;
+        height: 100vh;
+
+        #top-header {
+            #title {
+                #logo {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    #logo-text {
+                        place-content: center left;
+                        font-size: 70px;
+                        margin: 0;
+                        padding: 0;
+                        position: relative;
+                        color: #4C7ACB;
+                        font-family: 'Rozha One';
+                    }
+                    #new-message-button {
+                        display: grid;
+                        place-content: center right;
+                        p {
+                            font-family: 'Rozha One';
+                            background-color: #ffffff;
+                            color: rgb(31, 31, 31);
+                            font-size: 17px;
+                            padding: 12px;
+                            border-radius: 20px;
+                            transition: background-color 0.1s linear;
+                        }
+                        p:hover {
+                            background-color: rgb(241, 241, 241);
+                        }
+                        p:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+                #greeting {
+                    p {
+                        font-family: 'Rozha One';
+                        font-size: 20px;
+                    }
+                    position: relative;
+                    bottom: 15px
+                }
+            }
+        }
+        #body-dashboard {
+            #body-inner-dashboard {
+                display: grid;
+                grid-template-columns: 250px 400px 1fr;
+                gap: 10px;
+                #options {
+                    display: grid;
+                    grid-template-rows: 1fr 1fr 1fr;
+                    gap: 10px;
+                    height: 167px;
+                    #inbox-container {
+                        display: grid;
+                        user-select: none;
+                        cursor: pointer;
+                        #inbox-inner {
+                            background-color: rgb(255,254,254, 0.61);
+                            width: 100%;
+                            position: relative;
+                            height: 49px;
+                            display: grid;
+                            place-content: center;
+                            p {
+                                color: black;
+                                font-family: 'Rozha One';
+                                font-size: 19px;
+                            }
+                        }
+                    }
+                    #spam-container {
+                        display: grid;
+                        cursor: pointer;
+                        user-select: none;
+                        #spam-inner {
+                            background-color: rgb(255,254,254, 0.61);
+                            width: 100%;
+                            position: relative;
+                            height: 49px;
+                            display: grid;
+                            place-content: center;
+                            p {
+                                color: black;
+                                font-family: 'Rozha One';
+                                font-size: 19px;
+                            }                        
+                        }                   
+                     }
+                    #trash-container {
+                        display: grid;
+                        cursor: pointer;
+                        user-select: none;
+                        #trash-inner {
+                            background-color: rgb(255,254,254, 0.61);
+                            width: 100%;
+                            position: relative;
+                            height: 49px;
+                            display: grid;
+                            place-content: center;
+                            p {
+                                color: black;
+                                font-family: 'Rozha One';
+                                font-size: 19px;
+                            }
+                    }
+                }
+            }
+                #email-list {
+                    #email-list-container {
+                        display: grid;
+                        gap:10px;
+                        #email-item {
+                            cursor: pointer;
+                            background-color: rgb(255,254,254, 0.61);
+                            width: 100%;
+                            position: relative;
+                            height: 49px;
+                            display: grid;
+                            gap: 10px;
+                            #email-name-list {
+                                user-select: none;
+                                padding-left: 5px;
+                                p {
+                                    color: black;
+                                    font-family: 'Rozha One';
+                                    font-size: 19px;
+                                    font-weight: 800;
+                                }
+                            }
+                            #email-body-list {
+                                user-select: none;
+
+                                p {
+                                    color: "#151515";
+                                    font-family: 'Rozha One';
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+                #email-contents {
+                    background-color: rgb(255,254,254);
+                    height: 700px;
+                    border-radius: 20px;
+                    .center-container {
+                        display:grid;
+                        place-content: center;
+                        text-align: center;
+                        justify-items: center;
+                        height: 100%;
+                      }
+                      
+                      .spinner {
+                        border: 4px solid rgba(255, 255, 255, 0.3); /* White background */
+                        border-top: 4px solid #3498db; /* Blue spinner */
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                        animation: spin 1s linear infinite;
+                        margin-bottom: 20px; /* Spacing between spinner and text */
+                      }
+                      
+                      @keyframes spin {
+                        0% { transform: rotate(0deg); }
+                        100% { transform: rotate(360deg); }
+                      }
+
+                      #contents-container {
+                        height: 100%;
+                        #header {
+                            padding: 15px 20px 10px 20px;
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            #subject {
+                                display: grid;
+                                place-content: center left;
+                                font-family: 'Rozha One';
+                            }
+                            #is-spam-button {
+                                display: grid;
+                                place-content: center right;
+                                p {
+                                    font-family: 'Rozha One';
+                                    background-color: #4C7ACB;
+                                    color: white;
+                                    font-size: 17px;
+                                    padding: 12px;
+                                    border-radius: 20px;
+                                }
+                                p:hover {
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                        #profile {
+                            display: grid;
+                            grid-template-rows: 1fr;
+                            grid-template-columns: 115px 1fr;
+                            padding: 15px 20px 10px 20px;
+                            #avi {
+                                img {
+                                    height: 100px;
+                                    width: 100px;
+                                    border-radius: 100%;
+                                }
+                            }
+                            #contact {
+                                display: grid;
+                                place-content: center start;
+                                #name-info {
+                                    justify-self: start;
+                                    p {
+                                        font-family: 'Rozha One';
+                                    }
+                                }
+                                #email-info {
+                                    justify-self: start;
+                                    p {
+                                        font-family: 'Rozha One'
+                                    }
+                                }
+                            }
+                        }
+                        #body-container-email {
+                            p {
+                                font-family: 'Rozha One';
+                                padding: 15px 20px 10px 20px;
+                                max-width: max-content;
+                                overflow-y: scroll;
+                            }
+                        }
+                      }
+                }
+            }
+        }
+    }
+}
+
+#new-message-container {
+  position: absolute;
+  width: 400px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: grab;
+}
+
+#new-message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: grab;
+  background: #f5f5f5;
+  padding: 8px;
+  border-radius: 8px 8px 0 0;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}

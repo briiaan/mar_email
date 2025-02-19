@@ -9,12 +9,16 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
+    "@react-router/fs-routes": "^7.1.5",
     "@react-router/node": "^7.1.5",
     "@react-router/serve": "^7.1.5",
+    "dotenv": "^16.4.7",
     "isbot": "^5.1.17",
+    "mongoose": "^8.10.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router": "^7.1.5"
+    "react-router": "^7.1.5",
+    "sass": "^1.84.0"
   },
   "devDependencies": {
     "@react-router/dev": "^7.1.5",

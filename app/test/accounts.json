@@ -1,0 +1,37 @@
+[
+    {
+      "email": "alice@example.com",
+      "password": "hashedpassword123",
+      "firstname": "Alice",
+      "lastname": "Johnson",
+      "profilepic": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      "email": "charlie@example.com",
+      "password": "securepass456",
+      "firstname": "Charlie",
+      "lastname": "Smith",
+      "profilepic": "https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg"
+    },
+    {
+      "email": "eva@example.com",
+      "password": "password789",
+      "firstname": "Eva",
+      "lastname": "Brown",
+      "profilepic": "https://images.pexels.com/photos/1054655/pexels-photo-1054655.jpeg?cs=srgb&dl=pexels-hsapir-1054655.jpg&fm=jpg"
+    },
+    {
+      "email": "george@example.com",
+      "password": "mysecurepass",
+      "firstname": "George",
+      "lastname": "Miller",
+      "profilepic": "https://www.bkacontent.com/wp-content/uploads/2016/06/Depositphotos_31146757_l-2015.jpg"
+    },
+    {
+      "email": "isla@example.com",
+      "password": "strongpassword321",
+      "firstname": "Isla",
+      "lastname": "Davis",
+      "profilepic": "https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_1280.jpg"
+    }
+]

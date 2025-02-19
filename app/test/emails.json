@@ -1,0 +1,74 @@
+[
+    {
+      "from": "alice@example.com",
+      "to": "bob@example.com",
+      "subject": "Meeting Reminder",
+      "body": "Hey Bob, just reminding you about our meeting tomorrow at 10 AM.",
+      "flag": false,
+      "trash": false,
+      "time_sent": " 2024-02-17T14:30:00Z"
+    },
+    {
+      "from": "charlie@example.com",
+      "to": "dave@example.com",
+      "subject": "Project Update",
+      "body": "Hi Dave, I've completed the initial draft of the project. Let me know your thoughts!",
+      "flag": true,
+      "trash": false,
+      "time_sent": "2024-02-16T09:45:00Z"
+    },
+    {
+      "from": "eva@example.com",
+      "to": "frank@example.com",
+      "subject": "Weekend Plans",
+      "body": "Hey Frank, are we still on for the hiking trip this weekend?",
+      "flag": false,
+      "trash": true,
+      "time_sent": "2024-02-15T18:10:00Z"
+    },
+    {
+      "from": "george@example.com",
+      "to": "hannah@example.com",
+      "subject": "Invoice for Services",
+      "body": "Hello Hannah, please find attached the invoice for the services provided.",
+      "flag": true,
+      "trash": false,
+      "time_sent": "2024-02-14T12:00:00Z"
+    },
+    {
+      "from": "isla@example.com",
+      "to": "jack@example.com",
+      "subject": "Re: Job Offer",
+      "body": "Dear Jack, I appreciate the job offer and would love to discuss the details further.",
+      "flag": false,
+      "trash": false,
+      "time_sent": "2024-02-13T16:20:00Z"
+    },
+    {
+        "from": "isla@example.com",
+        "to": "jack@example.com",
+        "subject": "Re: Job Offer",
+        "body": "Dear Jack, I appreciate the job offer and would love to discuss the details further.",
+        "flag": false,
+        "trash": false,
+        "time_sent": "2024-02-13T16:20:00Z"
+      },
+      {
+        "from": "isla@example.com",
+        "to": "brian@email.com",
+        "subject": "Hello",
+        "body": "Dear Brian, I appreciate the job offer and would love to discuss the details further.",
+        "flag": false,
+        "trash": false,
+        "time_sent": "2024-02-18T16:20:00Z"
+      },
+      {
+        "from": "eva@example.com",
+        "to": "brian@email.com",
+        "subject": "About yesterday",
+        "body": "Hello Brian, I was wondering and would love to discuss the details further.",
+        "flag": false,
+        "trash": false,
+        "time_sent": "2024-02-08T16:20:00Z"
+      }
+  ]
