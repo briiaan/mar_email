@@ -4,12 +4,13 @@ import { getSession } from "~/sessions.server";
 import data_emails from "../test/emails.json"
 import data_account from "../test/accounts.json"
 import { redirect, useLoaderData, Form, useSubmit } from "react-router";
-import { useState } from "react"; // Import useState
+import { useReducer, useState } from "react"; // Import useState
 import mongoose from "mongoose";
 import dotenv from "dotenv"
 import {Email} from "../db/models";
 
 const MONGODB_URI = process.env.MONGODB_URI;
+const PORT = process.env.PORT;
 
 
 export function meta() {
@@ -28,6 +29,7 @@ export async function action({ request }: Route.ActionArgs) {
     const value = formData.get("value");
     const flag = formData.get("flag")
     const is_trash = formData.get("is_trash")
+
     const emailQuery = {
       from: formData.get("from"),
       subject: formData.get("subject"),
@@ -38,13 +40,17 @@ export async function action({ request }: Route.ActionArgs) {
     const updateData = {};
     if(type == "is_spam") {
       updateData.flag = value;
+
       const updatedEmail = await Email.findOneAndUpdate(emailQuery, updateData, {
         new: true, // Return the updated document
       });
+
       if (typeof updatedEmail == null) {
         return { success: false, message: "Email not found" };
       }
+
       return { success: true, updatedEmail };
+
       } else if (type == "is_trash") {
         console.log(value, type, is_trash)
         updateData.is_trash = value     
@@ -58,10 +64,12 @@ export async function action({ request }: Route.ActionArgs) {
        return { success: true, updatedEmail };
  
     } else if (type == "new_message") {
+
       const to = formData.get("to");
       const subject = formData.get("subject");
-      const body = formData.get("body")
+      const body = formData.get("body").toString().split("+").join("").split("  ").join(" ")
       const from = formData.get("from")
+
       const email = {
         from: from,
         to: to,
@@ -70,13 +78,13 @@ export async function action({ request }: Route.ActionArgs) {
         is_trash: false,
         time_sent: new Date(),
       }
+
       const postData = {
         body: body, // Send the body in the request
-      };
-    
+      };    
       try {
         // Send the POST request to your backend
-        const response = await fetch('http://127.0.0.1:8080/predict', {
+        const response = await fetch(`http://127.0.0.1:${PORT}/predict`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json', // Ensure JSON content type
@@ -111,7 +119,6 @@ export async function loader({ request }: Route.LoaderArgs) {
   }
 
   const current_user = session.get("userId");
-
   try {
     // Connect to MongoDB
     await mongoose.connect(`${MONGODB_URI}/email`);    
@@ -130,13 +137,12 @@ export async function loader({ request }: Route.LoaderArgs) {
       .map(email => {
         // Find sender profile in accounts collection
         const senderProfile = accounts.find(account => account.email === email.from);
-        console.log(senderProfile)
         return {
           ...email,
           firstname: senderProfile?.firstname || "Unknown",
           lastname: senderProfile?.lastname || "Unknown",
           profilepic: senderProfile?.profilepic || "https://source.unsplash.com/200x200/?random",
-          currentUserID: user?.first_name
+          currentUserID: user?.firstname
         };
       });
     return filteredAndSortedEmails;
